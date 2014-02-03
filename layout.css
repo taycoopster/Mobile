@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media(max-width: 640px) and (min-width: 384px){
+
+	@viewport{
+		width: device-width;
+	}
+}
+
+h3{
+	margin-left:40%;
+	color:#F00;
+}
+
+p.ipsum{
+	margin-left:10%;
+	margin-right:10%;
+	color:#F00;
+}
