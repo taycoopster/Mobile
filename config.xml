@@ -3,38 +3,40 @@
 <widget xmlns="http://www.w3.org/ns/widgets"
 		version="2.0">
 		
-		<author>Taylor Cooper</author>
+		<author href="http://students.tfhsbruins.com">Taylor Cooper</author>
 		<name>Mobile Web App</name>
-	//iOS icons
+		<description>Mobile App</description>
+	
+	<!--iOS icons -->	
 	<icon src="icons/ios/icon.png" gap:platform="ios" width="57" height="57" />
 	<icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
 	<icon src="icons/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
 
-	//iOS retina display icon
+	<!--iOS retina display icon-->
 	<icon src="icons/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
 
-	//android icons
+	<!--android icons-->
 	<icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
 	<icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
 	<icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
 	<icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
 
-	//windows phone icons
+	<!--windows phone icons-->
 	<icon src="icons/winphone/icon.png" gap:platform="winphone" />
 	<icon src="icons/winphone/tileicon.png" gap:platform="winphone" gap:role="background" />
 	
-	//IOS splash screens
+	<!--IOS splash screens-->
 	<gap:splash src="splash/ios/default-iphone.png" gap:platform="ios" width="320" height="480" />
 	<gap:splash src="splash/ios/default-ipad.png" gap:platform="ios" width="768" height="1004" />
 	<gap:splash src="splash/ios/ipad-retina.png" gap:platform="ios" width="1536" height="2008" />
 
-	//android splash screens
+	<!--android splash screens-->
 	<gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
 	<gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
 	<gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
 	<gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
 	
-	//windows phone splash screens
+	<!--windows phone splash screens-->
 	<gap:splash src="splash/winphone/splash.jpg" gap:platform="winphone" />
 
 </widget>
