@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<widget xmlns="http://www.w3.org/ns/widgets"
-		version="2.0">
+<widget xmlns			=	"http://www.w3.org/ns/widgets"
+		xmlns:gap 		= 	"http://phonegap.com/ns/1.0"
+		xmlns:android 	= 	"http://schemas.android.com/apk/res/android"
+		id 				= 	"me.taylor.mobile"
+		version			=	"2.0"	>
 		
-		<author href="http://students.tfhsbruins.com">Taylor Cooper</author>
-		<name>Mobile Web App</name>
-		<description>Mobile App</description>
+		<author href="http://students.tfhsbruins.com">
+		Taylor Cooper
+		</author>
+		
+		<name>
+		Mobile Web App
+		</name>
+		
+		<description>
+		Mobile App
+		</description>
+	
 	
 	<!--iOS icons -->	
 	<icon src="icons/ios/icon.png" gap:platform="ios" width="57" height="57" />
