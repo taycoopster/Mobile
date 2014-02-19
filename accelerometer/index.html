@@ -11,7 +11,7 @@
 
 
 <div data-role="page">
-
+Hello world...
 <script type="text/javascript">
 
 	var watchID = null;
@@ -37,6 +37,7 @@
 	
 	//when onSuccess fires- pull acceleration
 	function onSuccess(acceleration){
+		document.write('Success');
 		var element = document.getElementById('accel');
 		element.innerHTML = 'Acceleration X:' + acceleration.x + '<br />' +
 							'Acceleration Y:' + acceleration.y + '<br />' +
@@ -51,7 +52,7 @@
 
 </script>
 
-<div id="accel"></div>
+<div id="accel">Waiting...</div>
 
 
 </div>
