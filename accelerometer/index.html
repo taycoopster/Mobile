@@ -5,7 +5,9 @@
 <title>Untitled Document</title>
 <script type="text/javascript">
 
-document.addEventListener("deviceready", myCallBackFunction, false);
+	function onBodyLoad(){
+		document.addEventListener("deviceready", myCallBackFunction, false);
+	}
 	var watchID = null;
 	//wait for API libraries
 		
@@ -49,7 +51,7 @@ document.addEventListener("deviceready", myCallBackFunction, false);
 
 </head>
 
-<body>
+<body onLoad="onBodyLoad();">
 
 
 <div data-role="page">
