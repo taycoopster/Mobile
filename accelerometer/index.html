@@ -5,19 +5,16 @@
 <title>Untitled Document</title>
 <script type="text/javascript">
 
-	function onBodyLoad(){
-		document.addEventListener("deviceready", myCallBackFunction, false);
-	}
+		$(document).ready(startWatch());
+
 	var watchID = null;
 	//wait for API libraries
 		
-	function myCallBackFunction(){
-		window.alert('deviceReady fired');
 		startWatch();
-	}
 	
 	function startWatch(){
 		
+		window.alert('deviceReady fired');
 		var options = { frequency: 10 };
 		
 		watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);	
