@@ -13,12 +13,13 @@
 <div data-role="page">
 Hello world...
 <script type="text/javascript">
-
+document.addEventListener("deviceready", myCallBackFunction, false);
 	var watchID = null;
 	//wait for API libraries
 		
-	startWatch();
-	
+	function myCallBackFunction(){
+		startWatch();
+	}
 	
 	function startWatch(){
 		
