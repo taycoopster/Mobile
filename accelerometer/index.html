@@ -37,7 +37,7 @@ Hello world...
 	
 	//when onSuccess fires- pull acceleration
 	function onSuccess(acceleration){
-		document.write('Success');
+		console.log('Success');
 		var element = document.getElementById('accel');
 		element.innerHTML = 'Acceleration X:' + acceleration.x + '<br />' +
 							'Acceleration Y:' + acceleration.y + '<br />' +
