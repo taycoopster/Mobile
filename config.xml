@@ -18,7 +18,7 @@
 		Mobile App
 		</description>
 	
-	
+	<preference name="phonegap-version" value="2.7.0" />
 	<!--iOS icons -->	
 	<icon src="icons/ios/icon.png" gap:platform="ios" width="57" height="57" />
 	<icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
