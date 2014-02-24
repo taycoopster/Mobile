@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Capture Photo</title>
+
+<script type="text/javascript" charset="utf-8"  src="../res/cordova-3.3.0/cordova-js/cordova-js/lib/cordova.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+var pictureSource;  //source for picture
+var destinationType;  //set format of returned value
+
+//phonegap connecting to device
+document.addEventListener("deviceready", onDeviceReady, false);
+
+
+//we be good
+function onDeviceReady(){
+	pictureSource = navigator.camera.PictureSourceType;
+	destinationType = navigator.camera.DestinationType;	
+}
+
+
+//called when photo retrieval is successful
+function onPhotoDataSuccess(ImageData){
+		var smallImage = document.getElementById('smallImage');
+		
+		smallImage.style.display = 'block';
+
+		//show photo
+		smallImage.src = "data:image/jpeg;base64," + imageData;
+		
+}
+
+//when photo is retrieved
+function onPhotoURISuccess(imageURI){
+	//console.log(imageURI)
+	
+	//get imagehandle
+	var largeImage = document.getElementById('largeImage');
+	
+	largeImage.style.display = 'block';
+	
+	largeImage.src = imageURI;
+}
+
+//this is called by a button somewhere out there in the body
+function capturePhoto(){
+	//takes a picture, obviously
+	navigator.camera.getPicture(onPhotoDataSuccess, onError, {quality: 50,
+	destinationType: destinationType.DATA_URL });	
+}
+
+//also called by a button in the body
+function capturePhotoEdit() {
+      // Take picture using device camera, allow edit
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+        destinationType: destinationType.DATA_URL });
+    }
+
+//there's gonna be some serious buttoning goin on down there
+function getPhoto(source){
+	//retrieve image file from source
+	navigator.camera.getpicture(onPhotoURISuccess, onError, { quality: 50,
+	destinationType: destinationType.FILE_URI, sourceType: source });	
+}
+
+
+//the infamous error function
+function onError(message){
+	alert('Failed!');	
+}
+
+
+</script>
+</head>
+
+<body>
+
+<!-- TIME FOR SOME BUTTONS -->
+<button onClick="capturePhoto();">Capture Photo</button>
+
+<br />
+
+<button onClick="capturePhotoEdit();">Capture Photo to Edit</button>
+
+<br />
+
+<button onClick="getPhoto(pictureSource.PHOTOLIBRARY);">From Library</button>
+
+<br />
+
+<button onClick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Album</button>
+
+<br />
+
+<!-- Displaying images -->
+<img style="display:none;
+			width:60px;
+            height:60px;"
+     id="smallImage"
+     src="" />
+     
+<img style="display:none;"
+	id="largeImage"
+    src="" />
+
+<!-- Fin -->
+</body>
+</html>
